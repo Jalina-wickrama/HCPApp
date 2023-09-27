@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2D1C8A9B-154C-4B17-B66A-E977E6AD8B0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HCPApp</RootNamespace>
+    <AssemblyName>HCPApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.5, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.5\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment.Designer.cs">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Billing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Billing.Designer.cs">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnosis.Designer.cs">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForm.Designer.cs">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="HCPAppDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HCPAppDBDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HCPAppDBDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Medication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medication.Designer.cs">
+      <DependentUpon>Medication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientForm.Designer.cs">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rooms.Designer.cs">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffAppointment.Designer.cs">
+      <DependentUpon>StaffAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffBilling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffBilling.Designer.cs">
+      <DependentUpon>StaffBilling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDashboard.Designer.cs">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffDoctor.Designer.cs">
+      <DependentUpon>StaffDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffFunction.cs" />
+    <Compile Include="StaffMedication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMedication.Designer.cs">
+      <DependentUpon>StaffMedication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffPatient.Designer.cs">
+      <DependentUpon>StaffPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffRooms.Designer.cs">
+      <DependentUpon>StaffRooms.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment.resx">
+      <DependentUpon>Appointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Billing.resx">
+      <DependentUpon>Billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diagnosis.resx">
+      <DependentUpon>Diagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForm.resx">
+      <DependentUpon>DoctorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medication.resx">
+      <DependentUpon>Medication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientForm.resx">
+      <DependentUpon>PatientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Rooms.resx">
+      <DependentUpon>Rooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffAppointment.resx">
+      <DependentUpon>StaffAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffBilling.resx">
+      <DependentUpon>StaffBilling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDashboard.resx">
+      <DependentUpon>StaffDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffDoctor.resx">
+      <DependentUpon>StaffDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMedication.resx">
+      <DependentUpon>StaffMedication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffPatient.resx">
+      <DependentUpon>StaffPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffRooms.resx">
+      <DependentUpon>StaffRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HCPAppDBDataSet.xsc">
+      <DependentUpon>HCPAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet.xss">
+      <DependentUpon>HCPAppDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet1.xsc">
+      <DependentUpon>HCPAppDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet1.xss">
+      <DependentUpon>HCPAppDBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet2.xsc">
+      <DependentUpon>HCPAppDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet2.xss">
+      <DependentUpon>HCPAppDBDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet3.xsc">
+      <DependentUpon>HCPAppDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet3.xss">
+      <DependentUpon>HCPAppDBDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet4.xsc">
+      <DependentUpon>HCPAppDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet4.xss">
+      <DependentUpon>HCPAppDBDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet5.xsc">
+      <DependentUpon>HCPAppDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet5.xss">
+      <DependentUpon>HCPAppDBDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet6.xsc">
+      <DependentUpon>HCPAppDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet6.xss">
+      <DependentUpon>HCPAppDBDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet7.xsc">
+      <DependentUpon>HCPAppDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet7.xss">
+      <DependentUpon>HCPAppDBDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet8.xsc">
+      <DependentUpon>HCPAppDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet8.xss">
+      <DependentUpon>HCPAppDBDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet9.xsc">
+      <DependentUpon>HCPAppDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="HCPAppDBDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HCPAppDBDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HCPAppDBDataSet9.xss">
+      <DependentUpon>HCPAppDBDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
